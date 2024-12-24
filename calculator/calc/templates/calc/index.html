@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Calculator</title>
+        <style>
+            body{
+                font-family:Georgia, 'Times New Roman', Times, serif;
+            }
+            h1{
+                text-align: center;
+            }
+            form{
+                border: 2px solid black;
+                height: 500px;
+                width: 500px;
+                margin-left: 30%;
+                margin-top: 30px;
+            }
+            label, input{
+                margin-left: 25%;
+            }
+            input, select{
+                width: 50%;
+                height: 30px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            select{
+                margin-left: 25%;
+            }
+            button{
+                margin-left: 35%;
+                border-radius: 20px;
+                height: 40px;
+                width: 30%;
+                border: 2px solid black;
+                margin-top: 30px;
+            }
+            h2{
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="post">
+            <h1>Calculator</h1>
+            {% csrf_token %}
+            <!-- -----num1------- -->
+            <label for="num1">Number 1 : </label>
+            <input type="number" name="num1" id="num1" step="any"
+                required>
+            <!-- --------num2--------- -->
+            <label for="num2">Number 2: </label>
+            <input type="number" name="num2" id="num2" step="any"
+                required>
+
+            <!-- ----options ---------  -->
+            <label for="operation">Operation</label><br>
+            <select name="operation" id="operation">
+                <option value="add">Add</option>
+                <option value="substraction">substraction</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+            </select><br>
+            <button type="submit">Calculate</button>
+            {% if result is not None %}
+            <h2>Result : {{result}}</h2>
+            {% endif %}
+        </form>
+
+    </body>
+</html>
