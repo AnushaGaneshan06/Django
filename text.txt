@@ -1,0 +1,61 @@
+django-admin startproject myapp
+
+cd myapp
+
+python manage.py runserver
+
+
+--------PROJECT STRUCTURE---------
+
+python manage.py startapp blog = to create the file
+
+
+
+--------REGISTER THE APP-------
+
+1. WE CREATED THE APP 
+2. SO NOW WE HAVE TO REGISTER IT
+3. go setting in app(2) and in install app => write blog name
+
+
+--------creating the first view---------
+
+1. in blog => view.py
+
+
+style css connect :
+---------------
+STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    "/blog/static/blog"
+]
+
+
+
+ BASE_DIR / "myapp" / "templates",
+
+ 
+ALLOWED_HOSTS = [
+   ["localhost"],
+
+
+]
+
+
+
+
+
+----------------------
+py manage.py makemigrations bus_timings
+0001 in migration
+py manage.py makemigrations bustimings 
+py manage.py migrate       
+py manage.py sqlmigrate bustimings 0001
+admin
+py manage.py createsuperuser => create the password and email id and username
+
+
+username : hp
+password: anusha1234**
+
+
