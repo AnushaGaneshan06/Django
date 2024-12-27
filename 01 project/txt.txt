@@ -1,0 +1,39 @@
+----------step 1: Project creation--------
+
+    1. django - admin startproject book_management
+2. python manage.py startapp books
+
+
+--------Step 2: Set Up the Database----------
+    Django uses SQLite as the default database, so no extra setup is needed.
+
+3. book_management / settings.py => books
+
+--------step 3 : model.py-----------
+The model serves as the foundation for your database structure
+Book model first and the actions that follow:
+
+
+---------step 4: Apply migrations ------------
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+---------step 5 : Add the data in the admin panel----
+books/admin.py
+
+
+---------step 6: comments in terminal -----
+python manage.py createsuperuser
+
+
+--------step 7: View()  books/views.py----------
+
+-------step 8 : urls book/urls------
+
+
+------step 9: url in mother application book_management---
+
+
+
