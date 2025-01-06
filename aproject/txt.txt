@@ -1,6 +1,6 @@
 ----------step 1: Project creation--------
 
-    1. django - admin startproject book_management
+1. django - admin startproject book_management
 2. python manage.py startapp books
 
 
@@ -34,6 +34,7 @@ python manage.py createsuperuser
 
 
 ------step 9: url in mother application book_management---
+
 
 
 
