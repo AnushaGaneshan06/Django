@@ -30,14 +30,14 @@ def name(request):
 def add_number(request):
     if request.method == "POST":
         a = int(request.POST.get("a", 0))
-        b = int(request.POST.get("b", 0))
+        b = int(request.POST.get("b", 10))
         # return HttpResponse (f"the sum of {a} and {b} and {a + b}")
         return HttpResponse(f"The sum of {a} and {b} is {a + b}")
 
     
     elif request.method == "GET":
         a = int(request.GET.get("a", 0))
-        b = int(request.GET.get("b", 0))
+        b = int(request.GET.get("b", 10))
         return HttpResponse (f"{a}, {b} sum is {a + b}")
     
     return HttpResponse(f"send get and post request paramaters of a and b")
